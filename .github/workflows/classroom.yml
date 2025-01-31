@@ -31,20 +31,4 @@ jobs:
           python3 tests/test_assignment.py TestControlStructures.test_if_else
           python3 tests/test_assignment.py TestControlStructures.test_nested_loops
 
-      - name: Test for loop with continue
-  setup: ""
-  run: "python3 tests/test_assignment.py TestControlStructures.test_for_loop_continue"
-  input: ""
-  output: ""
 
-      - name: Test if-else statement
-    setup: ""
-    run: "python3 tests/test_assignment.py TestControlStructures.test_if_else"
-    input: ""
-    output: ""
-
-  - name: Test nested loops
-    setup: ""
-    run: "python3 tests/test_assignment.py TestControlStructures.test_nested_loops"
-    input: ""
-    output: ""
