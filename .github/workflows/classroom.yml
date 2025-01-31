@@ -20,10 +20,6 @@ jobs:
         with:
           python-version: '3.x'  # Adjust Python version if needed
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt  # Ensure this file exists
-
       - name: Run tests
         run: |
           python3 tests/test_assignment.py TestControlStructures.test_while_loop
