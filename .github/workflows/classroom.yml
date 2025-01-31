@@ -1,5 +1,36 @@
 name: Python Control Structures Assignment
 
+on:  # 👈 This is where the trigger should go
+  push:
+    branches:
+      - main  # Change if your branch name is different
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'  # Adjust Python version if needed
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Ensure this file exists
+
+      - name: Run tests
+        run: |
+          python3 tests/test_assignment.py TestControlStructures.test_while_loop
+          python3 tests/test_assignment.py TestControlStructures.test_for_loop_continue
+          python3 tests/test_assignment.py TestControlStructures.test_if_else
+          python3 tests/test_assignment.py TestControlStructures.test_nested_loops
+
 test_cases:
   - name: Test while loop
     setup: ""
