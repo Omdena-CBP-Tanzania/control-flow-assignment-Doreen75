@@ -1,9 +1,9 @@
 name: Python Control Structures Assignment
 
-on:  # 👈 This is where the trigger should go
+on:  
   push:
     branches:
-      - main  # Change if your branch name is different
+      - main  
   pull_request:
     branches:
       - main
@@ -31,20 +31,13 @@ jobs:
           python3 tests/test_assignment.py TestControlStructures.test_if_else
           python3 tests/test_assignment.py TestControlStructures.test_nested_loops
 
-test_cases:
-  - name: Test while loop
-    setup: ""
-    run: "python3 tests/test_assignment.py TestControlStructures.test_while_loop"
-    input: ""
-    output: ""
+      - name: Test for loop with continue
+  setup: ""
+  run: "python3 tests/test_assignment.py TestControlStructures.test_for_loop_continue"
+  input: ""
+  output: ""
 
-  - name: Test for loop with continue
-    setup: ""
-    run: "python3 tests/test_assignment.py TestControlStructures.test_for_loop_continue"
-    input: ""
-    output: ""
-
-  - name: Test if-else statement
+      - name: Test if-else statement
     setup: ""
     run: "python3 tests/test_assignment.py TestControlStructures.test_if_else"
     input: ""
