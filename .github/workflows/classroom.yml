@@ -22,9 +22,9 @@ jobs:
 
       - name: Run tests
         run: |
-          python3 tests/test_assignment.py TestControlStructures.test_while_loop
-          python3 tests/test_assignment.py TestControlStructures.test_for_loop_continue
-          python3 tests/test_assignment.py TestControlStructures.test_if_else
-          python3 tests/test_assignment.py TestControlStructures.test_nested_loops
+          python3 tests/test_math_operations.py TestControlStructures.test_while_loop
+          python3 tests/test_math_operations.py TestControlStructures.test_for_loop_continue
+          python3 tests/test_math_operations.py TestControlStructures.test_if_else
+          python3 tests/test_math_operations.py TestControlStructures.test_nested_loops
 
 
